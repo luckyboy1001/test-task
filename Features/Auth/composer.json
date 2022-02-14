@@ -1,6 +1,26 @@
 {
+    "name": "features/auth",
+    "description": "",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Mohammad Mohammadi",
+            "email": "m.mohammadi.developer@gmail.com"
+        }
+    ],
     "require": {
-        "php": "^8.1",
-        "laravel/sanctum": "^2.14",
+        "laravel/sanctum": "^2.14"
+    },
+    "autoload": {
+        "psr-4": {
+            "Features\\Auth\\": "./"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Features\\Auth\\AuthFeatureServiceProvider"
+            ]
+        }
     }
 }

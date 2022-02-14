@@ -3,13 +3,18 @@
     "type": "project",
     "description": "The Laravel Framework.",
     "keywords": ["framework", "laravel"],
+    "repositories": [
+        {
+            "type": "path",
+            "url": "./Features/**"
+        }
+    ],
     "license": "MIT",
     "require": {
         "php": "^8.1",
         "fruitcake/laravel-cors": "^2.0.5",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^9.0",
-        "laravel/sanctum": "^2.14",
         "laravel/tinker": "^2.7"
     },
     "require-dev": {
@@ -18,14 +23,14 @@
         "mockery/mockery": "^1.4.4",
         "nunomaduro/collision": "^6.1",
         "phpunit/phpunit": "^9.5.10",
-        "spatie/laravel-ignition": "^1.0"
+        "spatie/laravel-ignition": "^1.0",
+        "features/auth": "dev-master"
     },
     "autoload": {
         "psr-4": {
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
-            "Database\\Seeders\\": "database/seeders/",
-            "Features\\Auth\\": "Features/Auth/"
+            "Database\\Seeders\\": "database/seeders/"
         }
     },
     "autoload-dev": {

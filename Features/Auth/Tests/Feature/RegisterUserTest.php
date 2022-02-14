@@ -1,10 +1,9 @@
 <?php
 
-namespace Feature\Auth\Tests\Feature;
+namespace Features\Auth\Tests\Features;
 
-use App\Models\User;
+use Features\Auth\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Support\Arr;
 use Tests\TestCase;
 

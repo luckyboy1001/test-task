@@ -1,5 +1,6 @@
 <?php
 
+
 use Features\Auth\AuthFeatureServiceProvider;
 use Illuminate\Support\Facades\Facade;
 
@@ -179,7 +180,6 @@ return [
         App\Providers\RouteServiceProvider::class,
 
 
-        AuthFeatureServiceProvider::class,
 
     ],
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace Feature\Auth\Tests\Feature;
+namespace Features\Auth\Tests\Features;
 
-use App\Models\User;
+use Features\Auth\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
@@ -12,6 +12,7 @@ class LoginUserTest extends TestCase
 
     public function testApiTokenIssuesCorrectly()
     {
+        $this->withoutExceptionHandling();
         $user_data = $this->createUser();
 
         $response = $this->postJson(route('auth.login'), [

@@ -2,7 +2,7 @@
 
 namespace Features\Auth\Repos;
 
-use App\Models\User;
+use Features\Auth\Models\User;
 use Exception;
 
 class UserRepo
