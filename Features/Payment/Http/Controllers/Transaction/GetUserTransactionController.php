@@ -12,16 +12,14 @@ use Features\Payment\Resources\TransactionResource;
 use Features\Payment\Responses\Response;
 use Features\Payment\Services\HttpServices\MoveMoneyService;
 
-class GetUserTransactionsController extends Controller
+class GetUserTransactionController extends Controller
 {
 
-    public function index()
+    public function show($id)
     {
-        $data = TransactionRepo::allWhere([
-            ['user_id', auth()->id()]
-        ]);
+        $data = TransactionRepo::findUsers($id, auth()->id());
 
-        return TransactionResource::collection($data);
+        return new TransactionResource($data);
     }
 
 }

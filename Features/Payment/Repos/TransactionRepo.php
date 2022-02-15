@@ -7,6 +7,16 @@ use Features\Payment\Models\Transaction;
 class TransactionRepo
 {
 
+    public static function find($id)
+    {
+        return Transaction::findOrFail($id);
+    }
+
+    public static function findUsers($id, $user_id)
+    {
+        return Transaction::where('user_id', $user_id)->whereId($id)->firstOrFail();
+    }
+
     public static function all()
     {
         return Transaction::all();
