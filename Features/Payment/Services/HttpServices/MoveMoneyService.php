@@ -9,7 +9,7 @@ class MoveMoneyService extends Facade
 
     protected static function getFacadeAccessor()
     {
-        return FakeMoveMoney::class;
+        return MoveMoney::class;
     }
 
 }

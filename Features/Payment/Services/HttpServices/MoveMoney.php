@@ -3,23 +3,14 @@
 namespace Features\Payment\Services\HttpServices;
 
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Str;
 
 class MoveMoney
 {
 
-    public function move()
+    public function move($data = [])
     {
-        $data = [
-            "amount" => 100,
-            "description" => "شرح تراکنش",
-            "destinationFirstname" => "محمحد",
-            "destinationLastname" => "محمدی",
-            "destinationNumber" => "IR611828005214917501",
-            "paymentNumber" => "123456",
-            "sourceFirstName" => "علی",
-            "sourceLastName" => "محمدی",
-            "reasonDescription" => "تست"
-        ];
+        $trackId = Str::uuid();
 
         $token = config('payment.api-token');
         $url = "clients/{clientId}/transferTo?trackId={$trackId}";
@@ -34,11 +25,12 @@ class MoveMoney
 
         $data = $response->json();
 
-        if ($response->failed()) {
-            return $data;
-        }
-
-        dd($response);
+        return (object)[
+            'status' => $data['status'],
+            "track_id" => $data['trackId'],
+            'result' => $data['result'] ?? null,
+            'error' => $data['error'] ?? null
+        ];
     }
 
 }

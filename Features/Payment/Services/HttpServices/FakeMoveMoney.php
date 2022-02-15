@@ -12,13 +12,6 @@ class FakeMoveMoney
 
     public function move()
     {
-        $trackId = Str::uuid();
-        $url = "clients/{clientId}/transferTo?trackId={$trackId}";
-        $fullUrl = config('payment.api-prefix') . $url;
-
-
-
-
         return $this->getFakeResponse();
     }
 

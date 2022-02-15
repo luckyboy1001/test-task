@@ -4,6 +4,7 @@ namespace Features\Payment\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 
+use Features\Payment\Http\Requests\MoveMoneyRequest;
 use Features\Payment\Repos\TransactionRepo;
 use Features\Payment\Responses\Response;
 use Features\Payment\Services\HttpServices\MoveMoneyService;
@@ -11,7 +12,7 @@ use Features\Payment\Services\HttpServices\MoveMoneyService;
 class MoveMoneyController extends Controller
 {
 
-    public function move()
+    public function move(MoveMoneyRequest $request)
     {
         $response = MoveMoneyService::move();
 
