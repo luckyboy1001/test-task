@@ -1,0 +1,25 @@
+{
+    "name": "features/payment",
+    "description": "",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Mohammad Mohammadi",
+            "email": "m.mohammadi.developer@gmail.com"
+        }
+    ],
+    "require": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Features\\Payment\\": "./"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Features\\Payment\\PaymentFeatureServiceProvider"
+            ]
+        }
+    }
+}

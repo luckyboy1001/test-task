@@ -24,7 +24,10 @@
         "nunomaduro/collision": "^6.1",
         "phpunit/phpunit": "^9.5.10",
         "spatie/laravel-ignition": "^1.0",
-        "features/auth": "dev-master"
+
+        "features/auth": "dev-master",
+        "features/payment": "dev-master"
+
     },
     "autoload": {
         "psr-4": {

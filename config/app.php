@@ -180,7 +180,7 @@ return [
         App\Providers\RouteServiceProvider::class,
 
 
-
+//        \Features\Payment\PaymentFeatureServiceProvider::class,
     ],
 
     /*

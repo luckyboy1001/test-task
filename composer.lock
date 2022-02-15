@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "586300a59c092159318b91c28b7cfa68",
+    "content-hash": "e72afa5e32da9fb9ad1dd7280dfed660",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -5306,6 +5306,37 @@
             }
         },
         {
+            "name": "features/payment",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "./Features/Payment",
+                "reference": "b100c3dfe33fb7542f67fb8b232aad34fa6b7ea9"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Features\\Payment\\PaymentFeatureServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Features\\Payment\\": "./"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Mohammad Mohammadi",
+                    "email": "m.mohammadi.developer@gmail.com"
+                }
+            ],
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
             "name": "filp/whoops",
             "version": "2.14.5",
             "source": {
@@ -7829,7 +7860,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "features/auth": 20
+        "features/auth": 20,
+        "features/payment": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
