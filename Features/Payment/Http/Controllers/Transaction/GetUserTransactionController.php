@@ -11,6 +11,7 @@ use Features\Payment\Repos\TransactionRepo;
 use Features\Payment\Resources\TransactionResource;
 use Features\Payment\Responses\Response;
 use Features\Payment\Services\HttpServices\MoveMoneyService;
+use Illuminate\Support\Facades\Cache;
 
 class GetUserTransactionController extends Controller
 {

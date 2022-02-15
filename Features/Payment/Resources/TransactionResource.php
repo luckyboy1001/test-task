@@ -13,6 +13,7 @@ class TransactionResource extends JsonResource
             'id' => (int) $this->id,
             'status' => $this->status,
             'result' => $this->result,
+            'track_id' => $this->track_id,
             'created_at' => $this->created_at->format('Y-m-d H:i:s')
         ];
     }

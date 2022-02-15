@@ -12,7 +12,7 @@ class MoveMoneyTest extends TestCase
 {
     use RefreshDatabase;
 
-    public function testMoveMoneyWithCorrectInformation()
+    public function testMoveMoneyWithCorrectInformation(): void
     {
         $this->actingAs($user = User::factory()->create());
 
@@ -48,17 +48,9 @@ class MoveMoneyTest extends TestCase
     }
 
 
-    public function testMoveMoneyValidationErrorsRequired()
+    public function testMoveMoneyValidationErrorsRequired(): void
     {
         $this->actingAs($user = User::factory()->create());
-
-        $data = [
-            'amount' => 1200,
-            'description' => 'testing',
-            'destinationFirstname' => 'mohammad',
-            'destinationLastname' => 'mohammadi',
-            'destinationNumber' => '12345678912345678912345678'
-        ];
 
         $response = $this->postJson(route('payment.moveMoney'));
 
