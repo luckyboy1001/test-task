@@ -25,11 +25,11 @@ class MoveMoneyController extends Controller
 
 
         if ($response->status == 'FAILED') {
-            return Response::transactionFailed($response->error, $response->track_id);
+            return Response::transactionFailed($response->error, $response->track_id, status: $response->status);
         }
 
         if ($response->status == 'DONE') {
-            return Response::transactionSucceed($response->result, $response->track_id);
+            return Response::transactionSucceed($response->result, $response->track_id, status: $response->status);
         }
     }
 

@@ -18,9 +18,7 @@ class Transaction extends Model
         'result' => 'json'
     ];
 
-    const STATUS = [
-        'FAILED',
-        'DONE',
-    ];
+    const STATUS_DONE = 'DONE';
+    const STATUS_FAILED = 'FAILED';
 
 }
