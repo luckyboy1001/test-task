@@ -181,6 +181,7 @@ return [
 
 
 //        \Features\Payment\PaymentFeatureServiceProvider::class,
+//    \Features\Core\CoreFeatureServiceProvider::class
     ],
 
     /*

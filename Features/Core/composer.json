@@ -1,0 +1,25 @@
+{
+    "name": "features/core",
+    "description": "",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Mohammad Mohammadi",
+            "email": "m.mohammadi.developer@gmail.com"
+        }
+    ],
+    "require": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Features\\Core\\": "./"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Features\\Core\\CoreFeatureServiceProvider"
+            ]
+        }
+    }
+}

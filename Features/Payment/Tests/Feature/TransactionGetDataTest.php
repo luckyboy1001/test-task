@@ -14,6 +14,8 @@ class TransactionGetDataTest extends TestCase
 
     public function testTransactionShowValidResponse(): void
     {
+
+        $this->withoutExceptionHandling();
         $this->actingAs($user = User::factory()->create());
 
         $transaction = Transaction::factory()->createOne([

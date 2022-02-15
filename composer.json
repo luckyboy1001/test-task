@@ -25,8 +25,9 @@
         "phpunit/phpunit": "^9.5.10",
         "spatie/laravel-ignition": "^1.0",
 
-        "features/auth": "dev-master",
-        "features/payment": "dev-master"
+        "features/auth": "dev-main",
+        "features/payment": "dev-main",
+        "features/core": "dev-main"
 
     },
     "autoload": {

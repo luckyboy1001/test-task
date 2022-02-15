@@ -4,6 +4,8 @@ namespace Features\Payment;
 
 use Features\Auth\Models\User;
 use Features\Payment\Models\Transaction;
+use Features\Payment\Repos\Eloquent\TransactionRepo;
+use Features\Payment\Repos\Interfaces\TransactionRepoInterface;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 
@@ -29,6 +31,8 @@ class PaymentFeatureServiceProvider extends ServiceProvider
             return $user->belongsTo(Transaction::class, 'user_id');
         });
 
+
+        $this->app->bind(TransactionRepoInterface::class, TransactionRepo::class);
 
     }
 
